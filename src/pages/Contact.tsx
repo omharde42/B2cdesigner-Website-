@@ -33,7 +33,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground">Email</p>
-                  <p className="text-sm font-medium">hello@b2cdesigner.com</p>
+                  <p className="text-sm font-medium">b2csolution2436@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
