@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
-const reveal = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.2, 0, 0, 1] } },
-};
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.04 } } };
+import { reveal, stagger } from "@/lib/animations";
 
 export default function About() {
   return (

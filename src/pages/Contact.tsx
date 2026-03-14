@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Send, Mail, MapPin } from "lucide-react";
-
-const reveal = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.2, 0, 0, 1] } },
-};
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.04 } } };
+import { reveal, stagger } from "@/lib/animations";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", service: "", message: "" });
@@ -75,7 +70,7 @@ export default function Contact() {
               <motion.form
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: [0.2, 0, 0, 1], delay: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >

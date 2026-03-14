@@ -1,19 +1,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
-const reveal = {
-  hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.2, 0, 0, 1] } },
-};
-const stagger = { hidden: {}, show: { transition: { staggerChildren: 0.04 } } };
+import { reveal, stagger } from "@/lib/animations";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Login logic will be connected later
   };
 
   return (
@@ -30,30 +24,13 @@ export default function Login() {
           <motion.form variants={reveal} onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">Email</label>
-              <input
-                required
-                type="email"
-                value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="you@example.com"
-              />
+              <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="you@example.com" />
             </div>
             <div>
               <label className="block text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">Password</label>
-              <input
-                required
-                type="password"
-                value={form.password}
-                onChange={(e) => setForm({ ...form, password: e.target.value })}
-                className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="••••••••"
-              />
+              <input required type="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} className="w-full h-11 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" placeholder="••••••••" />
             </div>
-            <button
-              type="submit"
-              className="w-full h-11 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
-            >
+            <button type="submit" className="w-full h-11 rounded-lg bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity">
               Sign In
             </button>
           </motion.form>
