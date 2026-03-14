@@ -37,11 +37,29 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-4">Ecosystem</h4>
             <ul className="space-y-2">
-              <li><span className="text-sm text-muted-foreground">Swiftbuy — Shopify</span></li>
+              <li>
+                <a href="https://swiftbuy-9799.myshopify.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Swiftbuy Shopify Store
+                </a>
+              </li>
               <li><span className="text-sm text-muted-foreground">Swiftbuy — Printify</span></li>
               <li>
                 <a href="https://b2csolution.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   B2CSOLUTION
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-4">Contact</h4>
+            <ul className="space-y-2">
+              <li><span className="text-sm text-muted-foreground">Phone: 9882303030</span></li>
+              <li><span className="text-sm text-muted-foreground">Om Harde</span></li>
+              <li>
+                <a href="https://instagram.com/itzomharde_6" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  @itzomharde_6
                 </a>
               </li>
             </ul>
