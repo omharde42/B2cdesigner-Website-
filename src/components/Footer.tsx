@@ -65,15 +65,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-4">Legal</h4>
-            <ul className="space-y-2">
-              <li><span className="text-sm text-muted-foreground">Privacy Policy</span></li>
-              <li><span className="text-sm text-muted-foreground">Terms of Service</span></li>
-              <li><span className="text-sm text-muted-foreground">Cookie Policy</span></li>
-            </ul>
-          </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4">
